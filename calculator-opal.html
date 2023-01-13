@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+   
+    <style>
+    body{
+        width: 99%;
+        height: 90vh;    
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+       background-size: 1800% 1800%;
+       text-align: center;
+
+       -webkit-animation: rainbow 18s ease infinite;
+       -z-animation: rainbow 18s ease infinite;
+       -o-animation: rainbow 18s ease infinite;
+       animation: rainbow 18s ease infinite;}
+
+       @-webkit-keyframes rainbow {
+       0%{background-position:0% 82%}
+       50%{background-position:100% 19%}
+       100%{background-position:0% 82%}
+}
+       @-moz-keyframes rainbow {
+       0%{background-position:0% 82%}
+       50%{background-position:100% 19%}
+       100%{background-position:0% 82%}
+}
+       @-o-keyframes rainbow {
+       0%{background-position:0% 82%}
+       50%{background-position:100% 19%}
+       100%{background-position:0% 82%}
+}
+       @keyframes rainbow { 
+       0%{background-position:0% 82%}
+       50%{background-position:100% 19%}
+       100%{background-position:0% 82%}
+ 
+    }
+    input{
+        color: black;
+        border: 2px solid grey;
+        padding: 17px;
+        outline: none;
+        font-size: 22px;
+       font-family: cursive;
+    text-align: center;
+    align-items: center;
+    }
+    .num{
+        width: 64px;
+        height: 67px;
+        border-radius: 50%;
+    }
+    .text{
+        width: 160px;
+        height: 26px;
+        border-radius: 22px;
+        letter-spacing: 5px;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+    .text1{
+        width: 24px;
+        height: 26px;
+        border-radius: 22px;
+        letter-spacing: 5px;
+        text-align: center;
+        margin-bottom: 12px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .main{
+        display: inline-block;
+    }
+    .maincolor{
+        background-color: #deeaf8;
+    }
+    .blue{
+        background-color: #3887ef;
+    }
+    .per{
+        background-color: #8338ea;
+    }
+    .red{
+        background-color: #ff006c;
+    }
+    .org{
+        background-color: #fb5507;
+    }
+    .gre{
+        background-color: #6dc888;
+    }
+    footer {
+      width: 100%;
+      height: 10vh;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.1rem;
+    }
+
+    footer div a {
+      position: relative;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+
+    footer div a:hover::before {
+      background: linear-gradient(#ead6ee, #a0f1ea); 
+      opacity: .8;
+      top: -2px;
+      bottom: -2px;
+    }
+    </style>
+</head>
+<body>  
+    <div class="main">
+        <form action="" name="Calculator">
+           <input type="text" class="text maincolor" name="text1" disabled>
+           <input type="text" class="text1 maincolor" name="text12" value="C" onclick="location.reload()"><br>
+           <input type="button" class="num maincolor" name="btn9" value="9" onclick="displaynum(btn9.value)">
+           <input type="button" class="num maincolor" name="btn8" value="8" onclick="displaynum(btn8.value)">
+           <input type="button" class="num maincolor" name="btn7" value="7" onclick="displaynum(btn7.value)">
+           <input type="button" class="num blue" name="addbtn" value="+" onclick="displaynum(addbtn.value)"><br>
+           <input type="button" class="num maincolor" name="btn6" value="6" onclick="displaynum(btn6.value)">
+           <input type="button" class="num maincolor" name="btn5" value="5" onclick="displaynum(btn5.value)">
+           <input type="button" class="num maincolor" name="btn4" value="4" onclick="displaynum(btn4.value)">
+           <input type="button" class="num per" name="subbtn" value="-" onclick="displaynum(subbtn.value)"><br>
+           <input type="button" class="num maincolor" name="btn3" value="3" onclick="displaynum(btn3.value)">
+           <input type="button" class="num maincolor" name="btn2" value="2" onclick="displaynum(btn2.value)">
+           <input type="button" class="num maincolor" name="btn1" value="1" onclick="displaynum(btn1.value)">
+           <input type="button" class="num red" name="mulbtn" value="*" onclick="displaynum(mulbtn.value)"><br>
+           <input type="button" class="num maincolor" name="dot" value="." onclick="displaynum(dot.value)">
+           <input type="button" class="num maincolor" name="btn0" value="0" onclick="displaynum(btn0.value)">
+           <input type="button" class="num gre" name="eqlbtn" value="=" onclick="text1.value=eval(text1.value)">
+           <input type="button" class="num org" name="divbtn" value="/" onclick="displaynum(divbtn.value)"><br>
+           <footer>
+              <div>
+              created with <span style="color: pink;">&hearts;</span> by <a class="link" href="https://www.instagram.com/naufal.hadriann/" target="_blank" rel="nofollow"> @naufal.hadriannn</a>, 
+              </div>
+           </footer>
+           </form>
+        </div>
+
+    <script>
+        function displaynum(n1){
+            Calculator.text1.value=Calculator.text1.value+n1;
+        }
+    </script>
+</body>
+</html>
